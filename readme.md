@@ -20,7 +20,12 @@ Before beginning, make sure they understand that you assume from their resume th
   * (2 points) Recognizes extranneous loop in Generate Output based on putting items in a list and calling string.join
 3. Show them Class 3 and the Extensions file.
   * Ask them how they would apply the provided interface and introduce a second implementation
+    * (2 points) Make the class non-static
+    * (2 points) Remove the "this" keyword from each method
+    * (2 points) Remove the "static" keyword from each method
+    * (2 points) Change the existing calls to be made from an instance of the object
   * Ask them what they would need to change to make the library a pluggable dependency
+    * (2 points) Register the desired class in the IoC container
 4. Introduce class 4
   * Have them examine the IoC configuration in the program wrapper and suggest improvements
   * Ask them to finish the code review review by commenting on the unit tests

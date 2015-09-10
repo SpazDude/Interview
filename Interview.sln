@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{AC06D957-0223-433B-9D8D-9008E82B7AC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{F5050A30-BA63-4EFE-BD10-2BB71B358214}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7AAB804C-1B0A-4E0F-8B54-A3A004BF7DE8}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC06D957-0223-433B-9D8D-9008E82B7AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC06D957-0223-433B-9D8D-9008E82B7AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC06D957-0223-433B-9D8D-9008E82B7AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC06D957-0223-433B-9D8D-9008E82B7AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5050A30-BA63-4EFE-BD10-2BB71B358214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5050A30-BA63-4EFE-BD10-2BB71B358214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5050A30-BA63-4EFE-BD10-2BB71B358214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5050A30-BA63-4EFE-BD10-2BB71B358214}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

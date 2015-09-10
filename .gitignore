@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ConsoleApplication1/bin/Debug
+/ConsoleApplication1/obj/Debug
+/UnitTestProject1/obj/Debug
+/Packages
+*.user
+*.suo

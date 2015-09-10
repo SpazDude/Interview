@@ -1,8 +1,10 @@
 Administering the Interview
 ===========================
 ###30 minutes, 100 possible points
-Before beginning, make sure they understand that you assume from their resume that they are proficient in .NET, C#, SOLID design principles, and at least one IoC Container
+
 ---
+Before beginning, make sure they understand that you assume from their resume that they are proficient in .NET, C#, SOLID design principles, and at least one IoC Container
+
 1. Show the candidate Class1 and it's unit test
 
   They <i>may not</i> change the for loop

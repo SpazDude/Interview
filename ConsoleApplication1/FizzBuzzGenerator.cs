@@ -5,11 +5,11 @@ namespace ConsoleApplication1
     /// <summary>
     /// fizz-buzz generator
     /// </summary>
-    public class Class4 : IClass
+    public class FizzBuzzGenerator : IGenerateOutput
     {
         private readonly IRange _range;
 
-        public Class4(IRange range)
+        public FizzBuzzGenerator(IRange range)
         {
             _range = range;
         }

@@ -1,21 +1,31 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApplication1
 {
     /// <summary>
-    /// Generates a reverse-ordered, comma delimited
-    /// list of even numbers from 100 to 0 inclusive
+    /// generate a comma delimited list of numbers with a provided range
     /// </summary>
-    public class Class1 : IClass
+    public class Class1: IGenerateOutput
     {
+        private int _upper;
+        private int _lower;
+
+        public void SetRange(int lower, int upper)
+        {
+            if(lower >= upper) throw new ArgumentOutOfRangeException("lower", lower, "lower value should be less than upper");
+            _lower = lower;
+            _upper = upper;
+        }
+
         public string GenerateOutput()
         {
-            // do not change this loop
-            for (var i = 0; i <= 100; i++)
+            var results = new List<int>();
+            for (var i = _lower; i <= _upper; i++)
             {
-                
+                results.Add(i);
             }
-            return string.Empty;
+            return string.Join(", ", results);
         }
     }
 }

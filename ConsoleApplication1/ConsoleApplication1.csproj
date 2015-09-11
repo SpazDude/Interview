@@ -49,10 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReverseEvenNumberGenerator.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
-    <Compile Include="Class3.cs" />
-    <Compile Include="Class4.cs" />
+    <Compile Include="OddNumberGenerator.cs" />
+    <Compile Include="FizzBuzzGenerator.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Interfaces.cs" />
     <Compile Include="Program.cs" />

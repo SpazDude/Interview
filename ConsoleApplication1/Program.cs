@@ -18,7 +18,7 @@ namespace ConsoleApplication1
                 var option = Console.ReadLine();
                 try
                 {
-                    var myClass = container.Resolve<IClass>(option);
+                    var myClass = container.Resolve<IGenerateOutput>(option);
                     Console.WriteLine(myClass.GenerateOutput());
                 }
                 catch (ComponentNotFoundException ex)
@@ -35,13 +35,13 @@ namespace ConsoleApplication1
         {
             container.Register(
                 Component.For<IRange>().UsingFactoryMethod(() => new Range(0, 100)),
-                Component.For<IClass>().ImplementedBy<Class1>().Named("1"),
-                Component.For<IClass>()
-                    .ImplementedBy<Class2>()
+                Component.For<IGenerateOutput>().ImplementedBy<ReverseEvenNumberGenerator>().Named("1"),
+                Component.For<IGenerateOutput>()
+                    .ImplementedBy<Class1>()
                     .Named("2")
-                    .OnCreate((kernel, instance) => ((Class2)instance).SetRange(0, 100)),
-                Component.For<IClass>().ImplementedBy<Class3>().Named("3"),
-                Component.For<IClass>().ImplementedBy<Class4>().Named("4")
+                    .OnCreate((kernel, instance) => ((Class1)instance).SetRange(0, 100)),
+                Component.For<IGenerateOutput>().ImplementedBy<OddNumberGenerator>().Named("3"),
+                Component.For<IGenerateOutput>().ImplementedBy<FizzBuzzGenerator>().Named("4")
                 );
         }
     }

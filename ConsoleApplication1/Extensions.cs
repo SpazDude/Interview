@@ -1,5 +1,11 @@
 ﻿namespace ConsoleApplication1
 {
+    public interface IIntExtensions
+    {
+        bool IsEven(int value);
+        bool IsOdd(int value);
+    }
+
     public static class IntExtensions
     {
         public static bool IsEven(this int value)
@@ -13,11 +19,6 @@
         }
     }
 
-    public interface IIntExtensions
-    {
-        bool IsEven(int value);
-        bool IsOdd(int value);
-    }
 
     #region Alternate Implementation
     public class IntExtensions2 : IIntExtensions

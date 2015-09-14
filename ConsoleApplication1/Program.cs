@@ -35,12 +35,16 @@ namespace ConsoleApplication1
         {
             container.Register(
                 Component.For<IRange>().UsingFactoryMethod(() => new Range(0, 100)),
+
                 Component.For<IGenerateOutput>().ImplementedBy<ReverseEvenNumberGenerator>().Named("1"),
+
                 Component.For<IGenerateOutput>()
                     .ImplementedBy<Class1>()
                     .Named("2")
                     .OnCreate((kernel, instance) => ((Class1)instance).SetRange(0, 100)),
+
                 Component.For<IGenerateOutput>().ImplementedBy<OddNumberGenerator>().Named("3"),
+
                 Component.For<IGenerateOutput>().ImplementedBy<FizzBuzzGenerator>().Named("4")
                 );
         }

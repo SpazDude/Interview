@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTests
     {
         private class Range0To10 : IRange
         {
@@ -18,31 +18,31 @@ namespace UnitTestProject1
         {
             const string expected =
                 "100, 98, 96, 94, 92, 90, 88, 86, 84, 82, 80, 78, 76, 74, 72, 70, 68, 66, 64, 62, 60, 58, 56, 54, 52, 50, 48, 46, 44, 42, 40, 38, 36, 34, 32, 30, 28, 26, 24, 22, 20, 18, 16, 14, 12, 10, 8, 6, 4, 2, 0";
-            var class1 = new ReverseEvenNumberGenerator();
-            var result = class1.GenerateOutput();
+            var generator = new ReverseEvenNumberGenerator();
+            var result = generator.GenerateOutput();
             Assert.AreEqual(expected, result);
         }
         #endregion
 
-        #region Test RangeGenerator
+        #region Test Class1
         [TestMethod]
-        public void TestRangeGenerator()
+        public void TestClass1()
         {
             const string expected = "1, 2, 3, 4, 5";
-            var class2 = new Class1();
-            class2.SetRange(1, 5);
-            var result = class2.GenerateOutput();
+            var generator = new Class1();
+            generator.SetRange(1, 5);
+            var result = generator.GenerateOutput();
             Assert.AreEqual(expected, result);
         }
         #endregion
 
-        #region Test Class 3
+        #region Test OddNumberGenerator
         [TestMethod]
-        public void TestClass3()
+        public void TestOddNumberGenerator()
         {
             const string expected = "1, 3, 5, 7, 9";
-            var class3 = new OddNumberGenerator {Range = new Range0To10()};
-            var result = class3.GenerateOutput();
+            var generator = new OddNumberGenerator {Range = new Range0To10()};
+            var result = generator.GenerateOutput();
             Assert.AreEqual(expected, result);
         }
         #endregion

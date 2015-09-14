@@ -12,6 +12,9 @@ namespace ConsoleApplication1
     /// </summary>
     public class ReverseEvenNumberGenerator : IGenerateOutput
     {
+        /// <summary>
+        /// Use this class to provide a stream of values to Generate Output
+        /// </summary>
         private IEnumerable<int> GetStream()
         {
             for (var i = 0; i <= 100; i++)
@@ -21,10 +24,13 @@ namespace ConsoleApplication1
             yield break;
         }
 
+        /// <summary>
+        /// Make changes to this method
+        /// </summary>
         public string GenerateOutput()
         {
             // use GetStream() for the input range
-            return String.Empty;
+            return string.Empty;
         }
     }
 }

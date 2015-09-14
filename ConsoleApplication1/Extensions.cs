@@ -19,7 +19,6 @@
         }
     }
 
-
     #region Alternate Implementation
     public class IntExtensions2 : IIntExtensions
     {
@@ -34,5 +33,4 @@
         }
     }
     #endregion
-
 }

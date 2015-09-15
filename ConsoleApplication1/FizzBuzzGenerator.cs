@@ -5,7 +5,7 @@ namespace ConsoleApplication1
     /// <summary>
     /// fizz-buzz generator
     /// </summary>
-    public class FizzBuzzGenerator : IGenerateOutput
+    public class FizzBuzzGenerator : IOutputGenerator
     {
         private readonly IRange _range;
 

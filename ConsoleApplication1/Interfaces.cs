@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApplication1
 {
-    public interface IGenerateOutput
+    public interface IOutputGenerator
     {
         string GenerateOutput();
     }

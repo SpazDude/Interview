@@ -5,7 +5,7 @@ namespace ConsoleApplication1
     /// <summary>
     /// generate odd numbers in ascending order within a range
     /// </summary>
-    public class OddNumberGenerator : IGenerateOutput
+    public class OddNumberGenerator : IOutputGenerator
     {
         public IRange Range { get; set; }
 

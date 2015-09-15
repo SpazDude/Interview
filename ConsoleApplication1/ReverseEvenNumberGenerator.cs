@@ -10,7 +10,7 @@ namespace ConsoleApplication1
     /// Generates a reverse-ordered, comma delimited
     /// list of even numbers from 100 to 0 inclusive
     /// </summary>
-    public class ReverseEvenNumberGenerator : IGenerateOutput
+    public class ReverseEvenNumberGenerator : IOutputGenerator
     {
         /// <summary>
         /// Use this class to provide a stream of values to Generate Output
@@ -32,8 +32,11 @@ namespace ConsoleApplication1
         /// <returns>reverse-ordered, comma delimited list of even numbers from 100 to 0 inclusive</returns>
         public string GenerateOutput()
         {
+            var output = GetStream()
+                .Where(x=>x%2==0)
+                .Reverse();
             // use GetStream() for the input range
-            return string.Empty;
+            return String.Join(", ", output);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace ConsoleApplication1
     /// <summary>
     /// generate a comma delimited list of numbers with a provided range
     /// </summary>
-    public class Class1: IGenerateOutput
+    public class Class1: IOutputGenerator
     {
         private int _upper;
         private int _lower;

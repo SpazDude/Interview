@@ -6,12 +6,6 @@ namespace UnitTestProject1
     [TestClass]
     public class UnitTests
     {
-        private class Range0To10 : IRange
-        {
-            public int Lower { get { return 0; } }
-            public int Upper { get { return 10; } }
-        }
-
         #region Test ReverseEvenNumberGenerator
         [TestMethod]
         public void TestReverseEvenNumberGenerator()
@@ -37,6 +31,12 @@ namespace UnitTestProject1
         #endregion
 
         #region Test OddNumberGenerator
+        private class Range0To10 : IRange
+        {
+            public int Lower { get { return 0; } }
+            public int Upper { get { return 10; } }
+        }
+
         [TestMethod]
         public void TestOddNumberGenerator()
         {

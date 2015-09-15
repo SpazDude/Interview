@@ -1,5 +1,4 @@
 ﻿using System;
-using Castle.MicroKernel;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
@@ -8,24 +7,31 @@ namespace ConsoleApplication1
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            var container = new WindsorContainer();
-            container.Install(new AppInstaller());
-
-            do
+            using (var container = new WindsorContainer())
             {
-                var option = Console.ReadLine();
-                try
+                container.Install(new AppInstaller());
+                do
                 {
-                    var myClass = container.Resolve<IGenerateOutput>(option);
+                    IOutputGenerator myClass;
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            myClass = container.Resolve<OddNumberGenerator>();
+                            break;
+                        case "2":
+                            myClass = container.Resolve<Class1>();
+                            break;
+                        case "3":
+                            myClass = container.Resolve<OddNumberGenerator>();
+                            break;
+                        default:
+                            return;
+                    }
                     Console.WriteLine(myClass.GenerateOutput());
-                }
-                catch (ComponentNotFoundException ex)
-                {
-                    break;
-                }
-            } while (true);
+                } while (true);
+            }
         }
     }
 
@@ -36,16 +42,13 @@ namespace ConsoleApplication1
             container.Register(
                 Component.For<IRange>().UsingFactoryMethod(() => new Range(0, 100)),
 
-                Component.For<IGenerateOutput>().ImplementedBy<ReverseEvenNumberGenerator>().Named("1"),
+                Component.For<IOutputGenerator>().ImplementedBy<ReverseEvenNumberGenerator>(),
 
-                Component.For<IGenerateOutput>()
+                Component.For<IOutputGenerator>()
                     .ImplementedBy<Class1>()
-                    .Named("2")
                     .OnCreate((kernel, instance) => ((Class1)instance).SetRange(0, 100)),
 
-                Component.For<IGenerateOutput>().ImplementedBy<OddNumberGenerator>().Named("3"),
-
-                Component.For<IGenerateOutput>().ImplementedBy<FizzBuzzGenerator>().Named("4")
+                Component.For<IOutputGenerator>().ImplementedBy<OddNumberGenerator>()
                 );
         }
     }

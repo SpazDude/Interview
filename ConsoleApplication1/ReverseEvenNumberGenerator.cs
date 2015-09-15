@@ -32,11 +32,8 @@ namespace ConsoleApplication1
         /// <returns>reverse-ordered, comma delimited list of even numbers from 100 to 0 inclusive</returns>
         public string GenerateOutput()
         {
-            var output = GetStream()
-                .Where(x=>x%2==0)
-                .Reverse();
             // use GetStream() for the input range
-            return String.Join(", ", output);
+            return string.Empty;
         }
     }
 }

@@ -42,13 +42,13 @@ namespace ConsoleApplication1
             container.Register(
                 Component.For<IRange>().UsingFactoryMethod(() => new Range(0, 100)),
 
-                Component.For<IOutputGenerator>().ImplementedBy<ReverseEvenNumberGenerator>(),
+                Component.For<IOutputGenerator, ReverseEvenNumberGenerator>().ImplementedBy<ReverseEvenNumberGenerator>(),
 
-                Component.For<IOutputGenerator>()
+                Component.For<IOutputGenerator, Class1>()
                     .ImplementedBy<Class1>()
                     .OnCreate((kernel, instance) => ((Class1)instance).SetRange(0, 100)),
 
-                Component.For<IOutputGenerator>().ImplementedBy<OddNumberGenerator>()
+                Component.For<IOutputGenerator, OddNumberGenerator>().ImplementedBy<OddNumberGenerator>()
                 );
         }
     }

@@ -30,7 +30,7 @@ namespace ConsoleApplication1
         public string GenerateOutput()
         {
             // use GetStream() for the input range
-            return string.Empty;
+            return "Not Implemented.";
         }
     }
 }

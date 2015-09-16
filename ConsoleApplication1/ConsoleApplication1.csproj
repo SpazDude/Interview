@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppInstaller.cs" />
     <Compile Include="ReverseEvenNumberGenerator.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="OddNumberGenerator.cs" />

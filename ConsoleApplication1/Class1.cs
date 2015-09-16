@@ -13,7 +13,7 @@ namespace ConsoleApplication1
 
         public void SetRange(int lower, int upper)
         {
-            if(lower >= upper) throw new ArgumentOutOfRangeException("lower", lower, "lower value should be less than upper");
+            if (lower >= upper) throw new ArgumentOutOfRangeException("lower", lower, "The lower value should be less than the upper value.");
             _lower = lower;
             _upper = upper;
         }

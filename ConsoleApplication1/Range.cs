@@ -16,7 +16,7 @@ namespace ConsoleApplication1
             }
             else
             {
-                throw new ArgumentException("The lower value should be less than the upper value");
+                throw new ArgumentException("The lower value should be less than the upper value.");
             }
         }
     }

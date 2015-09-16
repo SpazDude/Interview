@@ -18,7 +18,7 @@ namespace ConsoleApplication1
                     switch (Console.ReadLine())
                     {
                         case "1":
-                            myClass = container.Resolve<OddNumberGenerator>();
+                            myClass = container.Resolve<ReverseEvenNumberGenerator>();
                             break;
                         case "2":
                             myClass = container.Resolve<Class1>();

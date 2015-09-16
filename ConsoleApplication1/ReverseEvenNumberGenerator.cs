@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Castle.Core.Internal;
 
 namespace ConsoleApplication1
 {
@@ -16,13 +17,9 @@ namespace ConsoleApplication1
         /// Use this class to provide a stream of values to Generate Output
         /// </summary>
         /// <returns>integers 0 to 100 inclusive</returns>
-        private IEnumerable<int> GetStream()
+        private static IEnumerable<int> GetStream()
         {
-            for (var i = 0; i <= 100; i++)
-            {
-                yield return i;
-            }
-            yield break;
+            return Enumerable.Range(0, 101);
         }
 
         /// <summary>

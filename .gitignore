@@ -8,3 +8,7 @@
 /Packages
 *.user
 *.suo
+*/bin
+*.crunchsolution.cache
+*/*.crunchsolution.cache
+*/bin
